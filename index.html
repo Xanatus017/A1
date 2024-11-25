@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MULT213 - A1</title>
-    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class = "container">
-        <div class = "meal-wrapper">
-          <div class = "meal-search">
-            <h2 class = "title">Find Meals For Your Ingredients</h2>
 
-            <div class = "meal-search-box">
-                <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
-                <button type = "submit" class = "search-btn btn" id = "search-btn">
-                </button>
-              </div>
+<body>
+    <div class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <h2 class="title">Find Meals For Your Ingredients</h2>
+
+                <div class="meal-search-box">
+                    <input type="text" class="search-control" placeholder="Enter an ingredient" id="search-input">
+                    <button type="submit" class="search-btn btn" id="search-btn">
+                    </button>
+                </div>
             </div>
 
 
-            <div class = "meal-result">
-                <h2 class = "title">Your Search Results:</h2>
-                <div id= "meal">
+            <div class="meal-result">
+                <h2 class="title">Your Search Results:</h2>
+                <div id="meal">
+
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="assets/burger.jpg" alt="food">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Cheese Burger</h3>
+                            <a href="#" class="recipe-btn">Get Recipe</a>
+                        </div>
+                    </div>
 
                 </div>
-              </div>
+            </div>
 
 
 
 
-    <script src = "script.js"></script>
+            <script src="script.js"></script>
 </body>
+
 </html>

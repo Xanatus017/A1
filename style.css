@@ -29,3 +29,17 @@ body{
 .container{
     min-height: 100vh;
 }
+
+.meal-wrapper{
+    max-width: 1280px;
+    text-align: center;
+}
+
+.meal-search{
+    margin: 2rem 0;
+}
+
+.meal-search-box{
+    margin: 1.2rem 0;
+    display: flex;
+}

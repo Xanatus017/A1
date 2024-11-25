@@ -10,10 +10,22 @@
 body{
     font-weight: 400;
     font-size: 1.1rem;
+    line-height: 1.7;
     font-family: 'Poppins', sans-serif;
 }
 
 .btn{
-    font-family: inherit;;
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
     font-size: 1.05rem;
+}
+
+.title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container{
+    min-height: 100vh;
 }

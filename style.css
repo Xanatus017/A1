@@ -71,7 +71,7 @@ body{
     color: var(--lime);
 }
 .search-btn{
-    width: 55px;
+    width: 120px;
     height: 55px;
     font-size: 1.8rem;
     background: var(--lime);

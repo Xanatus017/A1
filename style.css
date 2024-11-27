@@ -119,3 +119,14 @@ body{
 .meal-name h3{
     font-size: 1.4rem;
 }
+
+
+/* Media Queries */
+/* Mobile */
+@media screen and (min-width: 600px){
+    .meal-search-box{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

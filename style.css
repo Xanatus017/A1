@@ -214,6 +214,11 @@ body{
     opacity: 0.9;
 }
 
+.recipe-title{
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
 
 
 /* Media Queries */

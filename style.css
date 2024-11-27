@@ -175,6 +175,35 @@ body{
     color: #fff;
     background: var(--lime);
     border-radius: 1rem;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    /* display: none; */
+    padding: 2rem 0;
+}
+
+.meal-details::-webkit-scrollbar{
+    width: 10px;
+}
+.meal-details::-webkit-scrollbar-thumb{
+    background: #f0f0f0;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.recipe-close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
 
 

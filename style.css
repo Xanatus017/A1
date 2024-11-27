@@ -219,6 +219,30 @@ body{
     padding-bottom: 1rem;
 }
 
+.recipe-category{
+    background: #fff;
+    font-weight: 600;
+    color: var(--lime);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+
+.recipe-instruction{
+    padding: 1rem 0;
+}
+
+.meal-details-content{
+    margin: 2rem;
+}
+.meal-details-content p:not(.recipe-category){
+    padding: 1rem 0;
+}
+
 
 
 /* Media Queries */

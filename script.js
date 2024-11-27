@@ -1,5 +1,11 @@
 const searchBtn = document.getElementById('search-btn');
-
+const searchInput = document.getElementById('search-input');
+document.getElementById('search-btn').addEventListener('click', () => {
+    const ingredient = searchInput.value.trim();
+    if (ingredient) {
+        fetchMeals(ingredient);
+    }
+});
 
 
 const fetchMeals = (ingredient) => {

@@ -123,11 +123,12 @@ body{
 }
 
 
-.notFound {
-    text-align: center;
-    margin: 20px auto;
-    font-size: 18px;
-    color: #ff0000; 
+.notFound{
+    grid-template-columns: 1fr!important;
+    color: red;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
 }
 
 

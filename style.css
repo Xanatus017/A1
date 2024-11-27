@@ -123,6 +123,13 @@ body{
 }
 
 
+.notFound {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #ff0000; 
+}
+
 
 
 /* Media Queries */
@@ -158,24 +165,8 @@ body{
 
 @media screen and (min-width: 992px){
 
-
-    #meal {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-        gap: 2rem; /* Space between grid items */
-        justify-content: center;
-        align-items: start;
-    }
-
-    .notFound {
-        grid-column: span 3; /* Make the message span all columns */
-        display: flex;
-        justify-content: center; /* Center text horizontally */
-        align-items: center; /* Center text vertically */
-        text-align: center; /* Align multi-line text */
-        font-size: 18px;
-        color: #ff0000; /* Error text color */
-        height: 200px; /* Ensures a visible container for alignment */
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
     }
 
 

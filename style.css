@@ -79,4 +79,13 @@ body{
     border: none;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+
+.search-btn:hover{
+    background: var(--dark-green);
 }

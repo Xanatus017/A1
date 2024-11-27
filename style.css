@@ -131,6 +131,9 @@ body{
     }
 }
 
+/* Media Queries */
+/* Tablet */
+
 @media screen and (min-width: 768px){
     #meal{
         display: grid;
@@ -144,6 +147,9 @@ body{
         width: 700px;
     }
 }
+
+/* Media Queries */
+/* Web */
 
 @media screen and (min-width: 992px){
     #meal{

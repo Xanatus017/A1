@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    --lime: #00db78;
+    --dark-green: #13cb38;
+}
 
 body{
     font-weight: 400;
@@ -46,4 +50,19 @@ body{
     margin: 1.2rem 0;
     display: flex;
     align-items: stretch;
+}
+
+.search-control,
+.search-btn{
+    width: 100%;
+}
+.search-control{
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid var(--lime);
+    color: var(--lime);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
 }

@@ -93,9 +93,11 @@ body{
 
 .meal-result{
     margin-top: 4rem;
+    
 }
 #meal{
     margin: 2.4rem 0;
+    
 }
 
 .meal-item{
@@ -119,6 +121,8 @@ body{
 .meal-name h3{
     font-size: 1.4rem;
 }
+
+
 
 
 /* Media Queries */
@@ -146,13 +150,33 @@ body{
     .meal-details{
         width: 700px;
     }
+
 }
 
 /* Media Queries */
 /* Web */
 
 @media screen and (min-width: 992px){
-    #meal{
-        grid-template-columns: repeat(3, 1fr);
+
+
+    #meal {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        gap: 2rem; /* Space between grid items */
+        justify-content: center;
+        align-items: start;
     }
+
+    .notFound {
+        grid-column: span 3; /* Make the message span all columns */
+        display: flex;
+        justify-content: center; /* Center text horizontally */
+        align-items: center; /* Center text vertically */
+        text-align: center; /* Align multi-line text */
+        font-size: 18px;
+        color: #ff0000; /* Error text color */
+        height: 200px; /* Ensures a visible container for alignment */
+    }
+
+
 }

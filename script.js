@@ -1,8 +1,14 @@
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
 
+const mealDetailsContent = document.querySelector('.meal-details-content');
+const recipeCloseBtn = document.getElementById('recipe-close-btn');
+
 // Event listeners
 searchBtn.addEventListener('click', handleSearch);
+recipeCloseBtn.addEventListener('click', () => {
+    mealDetailsContent.parentElement.classList.remove('showRecipe');
+});
 
 // Handles the search button click
 function handleSearch() {

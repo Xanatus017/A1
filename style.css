@@ -178,7 +178,7 @@ body{
     width: 90%;
     height: 90%;
     overflow-y: scroll;
-    /* display: none;  */
+    display: none; 
     padding: 2rem 0;
 }
 
@@ -270,6 +270,10 @@ body{
 }
 .recipe-link a:hover{
     opacity: 0.8;
+}
+
+.showRecipe{
+    display: block;
 }
 
 

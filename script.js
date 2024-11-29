@@ -1,14 +1,14 @@
+// Get references to DOM elements
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
-
+const mealResult = document.querySelector('.meal-result');
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
 
 // Event listeners
 searchBtn.addEventListener('click', handleSearch);
-recipeCloseBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');
-});
+recipeCloseBtn.addEventListener('click', closeRecipeModal);
+mealList.addEventListener('click', getMealRecipe);
 
 // Handles the search button click
 function handleSearch() {
@@ -37,7 +37,7 @@ function displayMealList(meals) {
     let html = "";
 
     if (meals) {
-        meals.forEach((meal) => {
+        meals.forEach(meal => {
             html += `
                 <div class="meal-item" data-id="${meal.idMeal}">
                     <div class="meal-img">
@@ -52,43 +52,58 @@ function displayMealList(meals) {
         });
         mealList.classList.remove('notFound');
     } else {
-        html = "<p>Sorry, we didn't find any meal!</p>";
+        html = "<p>Sorry, we didn't find any meals!</p>";
         mealList.classList.add('notFound');
     }
 
     mealList.innerHTML = html;
 }
 
-
-// get recipe of the meal
-function getMealRecipe(e){
+// Get recipe of the selected meal
+function getMealRecipe(e) {
     e.preventDefault();
-    if(e.target.classList.contains('recipe-btn')){
-        let mealItem = e.target.parentElement.parentElement;
+
+    if (e.target.classList.contains('recipe-btn')) {
+        const mealItem = e.target.parentElement.parentElement;
+
+        // Fetch and show recipe
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
-        .then(response => response.json())
-        .then(data => mealRecipeModal(data.meals));
+            .then(response => response.json())
+            .then(data => {
+                mealRecipeModal(data.meals);
+                mealDetailsContent.parentElement.classList.add('showRecipe');
+                mealResult.classList.add('blur'); // Add blur class to meal-result
+            })
+            .catch(() => {
+                mealDetailsContent.innerHTML = "<p>Failed to load recipe. Please try again.</p>";
+                mealDetailsContent.parentElement.classList.add('showRecipe');
+                mealResult.classList.add('blur'); // Add blur class to meal-result
+            });
     }
 }
 
-// create a modal for a recipe
-function mealRecipeModal(meal){
-    console.log(meal);
-    meal = meal[0];
-    let html = `
-        <h2 class = "recipe-title">${meal.strMeal}</h2>
-        <p class = "recipe-category">${meal.strCategory}</p>
-        <div class = "recipe-instruct">
+// Create a modal for the recipe
+function mealRecipeModal(meal) {
+    meal = meal[0]; // Get the first meal from the array
+    const html = `
+        <h2 class="recipe-title">${meal.strMeal}</h2>
+        <p class="recipe-category">${meal.strCategory}</p>
+        <div class="recipe-instruction">
             <h3>Instructions:</h3>
             <p>${meal.strInstructions}</p>
         </div>
-        <div class = "recipe-meal-img">
-            <img src = "${meal.strMealThumb}" alt = "">
+        <div class="recipe-meal-img">
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
         </div>
-        <div class = "recipe-link">
-            <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
+        <div class="recipe-link">
+            <a href="${meal.strYoutube}" target="_blank">Watch Video</a>
         </div>
     `;
     mealDetailsContent.innerHTML = html;
-    mealDetailsContent.parentElement.classList.add('showRecipe');
+}
+
+// Close the recipe modal
+function closeRecipeModal() {
+    mealDetailsContent.parentElement.classList.remove('showRecipe');
+    mealResult.classList.remove('blur'); // Remove blur class from meal-result
 }

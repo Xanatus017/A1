@@ -37,7 +37,7 @@ footer {
 }
 
 .logo {
-    width: 80px;
+    width: 70px;
     margin-right: 20px;
     padding: 10px;
 }
@@ -69,6 +69,7 @@ footer {
 
 .meal-search {
     margin: 2rem 0;
+
 }
 
 .meal-search cite {
@@ -275,6 +276,7 @@ footer {
 .recipe-instruction {
     padding: 1rem 0;
     text-align: left;
+    margin-top: 10px;
 }
 
 .meal-details-content {
@@ -288,7 +290,13 @@ footer {
 }
 
 .recipe-meal-img img {
-    border-radius: 2%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
     margin: 0 auto;
     display: block;
 }
@@ -312,6 +320,12 @@ footer {
 .recipe-link a:hover {
     opacity: 0.8;
     color: var(--lime);
+}
+
+
+.blur {
+    filter: blur(8px);
+    pointer-events: none;
 }
 
 
